@@ -1,0 +1,25 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{vm.opts.title}}</h3>
+</div>
+<div class="modal-body">
+    
+    <div ng-if="vm.opts.body.tpl">
+        <ng-include ng-init="data = vm.opts.body.data" src="vm.opts.body.tpl"></ng-include>
+    </div>
+    
+    <div ng-if="vm.opts.body.form">
+        <formly-error-summary form="vm.opts.body.form.confirmForm" fields="vm.opts.body.form.fields"></formly-error-summary>
+        <form name="vm.opts.body.form.confirmForm" novalidate>
+            <formly-form model="vm.opts.body.form.model" fields="vm.opts.body.form.fields" options="vm.opts.body.form.options" form="vm.opts.body.form.confirmForm">
+            </formly-form>
+        </form>
+    </div>
+        
+    
+    <div ng-if="vm.opts.body.length" ng-bind-html="vm.opts.body">
+    </div>
+</div>
+<div class="modal-footer">
+    <button ng-if="vm.opts.negText" class="btn btn-warning" type="button" ng-click="$dismiss()">{{ vm.opts.negText ? vm.opts.negText : 'Cancel' }}</button>
+    <button ng-if="vm.opts.posText" class="btn btn-success" type="button" ng-disabled="vm.opts.body.form && vm.opts.body.form.confirmForm.$invalid" ng-click="$close('OK')">{{ vm.opts.posText ? vm.opts.posText : 'OK'}}</button>
+</div>
