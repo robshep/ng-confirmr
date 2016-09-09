@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "confirmr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "confirmr.ng.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robshep/ng-confirmr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robshep/ng-confirmr/issues"
+  },
+  "homepage": "https://github.com/robshep/ng-confirmr#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0"
+  }
+}
