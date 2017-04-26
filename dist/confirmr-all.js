@@ -44,11 +44,14 @@
     };
 }
 
+/** @ngInject */
 function ConfirmrController(opts) 
 {
     var vm = this;
     vm.opts = opts;
 }
+
+ConfirmrController.$inject = ['opts'];
 
 
 
